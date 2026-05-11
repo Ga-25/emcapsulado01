@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header em linha reta */
+.header-line {
+    width: 100%;
+    background: linear-gradient(45deg, #ff0000, #ff4444);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.title-line {
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Subtítulo */
+.subtitle-section {
+    margin: 30px 0;
+}
+
+.subtitle {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.subtitle p {
+    color: #ff4444;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Botão WhatsApp com pulsação */
+.cta-section {
+    margin: 30px 0;
+}
+
+.whatsapp-button {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-button:hover {
+    background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-button i {
+    font-size: 1.5rem;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 8px 35px rgba(37, 211, 102, 0.8);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        transform: scale(1);
+    }
+}
+
+/* Produto */
+.product-section {
+    margin: 40px 0;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+}
+
+/* Benefícios */
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    gap: 15px;
+}
+
+.benefit-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.benefit-item i {
+    font-size: 2rem;
+    color: #ff4444;
+}
+
+.benefit-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Garantia */
+.guarantee {
+    margin: 40px 0;
+}
+
+.guarantee-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.guarantee-badge i {
+    color: #25d366;
+    font-size: 1.2rem;
+}
+
+.guarantee-badge span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Seção de pagamento na entrega */
+.payment-section {
+    margin: 40px 0 20px 0;
+}
+
+.payment-banner {
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    border: 2px solid #ff0000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+}
+
+.payment-banner span {
+    color: #ff0000;
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .title-line {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .subtitle p {
+        font-size: 1rem;
+    }
+    
+    .product-image {
+        max-width: 200px;
+    }
+    
+    .whatsapp-button {
+        font-size: 1.1rem;
+        padding: 18px 25px;
+    }
+    
+    .benefits {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .benefit-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 15px;
+    }
+    
+    .benefit-item i {
+        font-size: 1.5rem;
+    }
+    
+    .payment-banner span {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+/* Espaço em branco grande */
+.spacer {
+    height: 200vh; /* Espaço equivalente a 2 páginas */
+    background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+}
+
+/* Seção de valores de pagamento */
+.pricing-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+}
+
+.pricing-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    width: 100%;
+}
+
+.pricing-title {
+    color: #dc2626;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-option {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-option.installment {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #1e40af;
+}
+
+.installment-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.installment-value {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.installment-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.pricing-divider {
+    color: #1e40af;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 20px 0 15px 0;
+    text-transform: uppercase;
+}
+
+.pricing-option.cash {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: white;
+}
+
+.cash-value {
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+/* Responsividade para a seção de preços */
+@media (max-width: 480px) {
+    .spacer {
+        height: 150vh; /* Espaço menor em mobile */
+    }
+    
+    .pricing-card {
+        padding: 25px;
+        margin: 0 15px;
+    }
+    
+    .pricing-title {
+        font-size: 1.1rem;
+    }
+    
+    .installment-value,
+    .cash-value {
+        font-size: 2.5rem;
+    }
+    
+    .installment-text {
+        font-size: 1.3rem;
+    }
+}
+
